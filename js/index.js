@@ -4,13 +4,19 @@ $(document).ready(init);
 
 function init() {
 
-	window.onscroll = function() {
-	    var viewportHieght = window.innerHeight || document.documentElement.clientHeight;
+	if(!isTouchDevice()) {
+		var banner = document.getElementById('banner');
+	    banner.style.position = 'fixed';
 
-	    // get ratio of scroll depth to screen size and use that to fade div
-	    var fade = 1 - ((getScrollTop() / viewportHieght) * 2);
+		window.onscroll = function() {
+		    var viewportHieght = $(window).height();
 
-		document.getElementById('banner').style.opacity = '' + fade;
+		    // get ratio of scroll depth to screen size and use that to fade div
+		    var position = $(document).scrollTop();
+		    var fade = 1 - (position / viewportHieght * 2);
+
+			banner.style.opacity = '' + fade;
+		}
 	}
 
 	$('#learn-more').on('click', function(e) {
@@ -18,12 +24,8 @@ function init() {
 	        'scrollTop': $('#main-content').offset().top
 	    }, 600, 'swing');
 	});
-	
-    console.log('ready');
 }
 
-// get scroll offset
-function getScrollTop() {
-	var doc = document.documentElement;
-	return (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-}
+function isTouchDevice() {
+	return 'ontouchstart' in window || 'onmsgesturechange' in window;
+};
