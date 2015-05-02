@@ -4,14 +4,17 @@
 	<head>
 		<title>JackBurns.io</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<script src="js/jquery-2.1.3.min.js"></script>
 		<script src="js/index.js"></script>
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/devicons.min.css" >
 
-		<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="css/font-awesome.min.css" />
 
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quicksand:400,700" >
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
 
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
@@ -21,42 +24,63 @@
 		<header id="header">
 			<div id="banner">
 				<div>
-					<h1> Hi I'm Jack</h1>
-					<p> I code things </p>
+					<h1>Hi, I'm Jack</h1>
+					<img class="profile" src="img/profile.jpg">
+					<h3>And I build web applications using:</h3>
+					<ul class="links">	
+						<li><span title="JavaScript" class="logo devicons devicons-javascript"></span></li>
+						<li><span title="Node.js" class="logo devicons devicons-nodejs"></span></li>
+						<li><span title="Angular.js"class="logo devicons devicons-angular"></span></li>
+						<li><span title="HTML5"class="logo devicons devicons-html5"></span></li>
+						<li><span title="SASS" class="logo devicons devicons-sass"></span></li>
+					</ul>
 				</div>
 			</div>
-			<div class="wrapper">
-				<div class="content">
-					<p>SUP</p>
+			<div id="learn-more" class="wrapper">
+				<div class="content advance">
+					<h1>Learn More</h1>
 				</div>
 			</div>
 		</header>
-		<main>
+		<main id="main-content">
 			<div class="wrapper">
 				<div class="content">
+					<h1>About</h1>	
+					<p>I'm a Computer Science major at Northeastern University in Boston entering my junior year. From July-December I'll be working as a Software Engineer at HourlyNerd before returning to classes in January.  Front-end web dev and UX are my main passions although I'm currently having a blast on the server-side thanks to Node.js.</p>
+					<p>
+					When I'm not building things or learning how to build things, usually I'm chilling to smooth electronic music, cruising the city on my longboard, or out on a photo shoot. Sometimes even all three at once!</p>
+				</div>
+				<div class="content">
+					<h1>Experience</h1>
+					<p>Most of my professional experience is as a front-end developer. Previously, I worked for <a href="https://www.flipkey.com/">Flipkey</a> where I used CakePHP and JavaScript to build out features on their main product site. My role included some exciting responsibilities, including collaborating directly with designers and product managers to improve user experience and increase convertion rate.</p>
+
+					<p>I love learning new technologies and have been experimenting with Node.js, Angular.js, React.js, and Python in addition to a taste of Android development.</p>
+				</div>
+				<div class="content">
+					<h1>Projects</h1>
+					<a href="cyclecircle-jburns.rhcloud.com"><h3>CycleCircle (Web App)</h3></a>
+					<p>Cycle Circle is a social app that allows cyclers to share their favorite rides usingusing Node.js, Express.js, jQuery, MongoDB, Passport.js, and Google Maps API.</p>
+					<h3>CycleCircle (Android App)</h3>
+					<p>Currently in alpha release. Based around the idea of spontaneous social meetups, allows cyclers in an area to view and create Groupon-style rides that fellow cyclers can join in on.
+					<a href="hangmangame-jburns.rhcloud.com"><h3>Hangman</h3></a>
+					<p>An overly engineered hangman game using Node.js, Express.js, jQuery, and Redis (be warned, the words used are normally very tricky).</p>
+					<h3>MediaLog.io (In Development)</h3>
+					<p>An app that combines many popular forms of media (movies, tv, music, books, and games) into one central location where users can build a profile of their favorite content, share with friends, and explore new media.</p>
+				</div>
+				<div class="content">
+					<h1>Where To Find Me</h1>
 					<ul class="links">
-						<li><a href="#" title="Twitter" class="icon fa fa-twitter"></a></li>
-						<li><a href="#" title="Photography" class="icon fa fa-camera"></a></li>
-						<li><a href="#" title="LinkedIn" class="icon fa fa-linkedin"></a></li>
-						<li><a href="#" title="GitHub" class="icon fa fa-github"></a></li>
-						<li><a href="#" title="Email" class="icon fa fa-envelope"></a></li>
+						<li><a href="https://twitter.com/raptiq" title="Twitter" class="icon fa fa-twitter"></a></li>
+						<li><a href="http://jackburnsphotography.com" title="Photography" class="icon fa fa-camera"></a></li>
+						<li><a href="https://www.linkedin.com/in/jackdburns" title="LinkedIn" class="icon fa fa-linkedin"></a></li>
+						<li><a href="http://github.com/raptiq" title="GitHub" class="icon fa fa-github"></a></li>
+						<li><a href="mailto:hi@jackburns.io" title="Email" class="icon fa fa-envelope"></a></li>
 					</ul>
-				</div>
-				<div class="content">
-					<p> content goes here </p>
-				</div>
-				<div class="content">
-					<p> content goes here </p>
-				</div>				<div class="content">
-					<p> content goes here </p>
-				</div>				<div class="content">
-					<p> content goes here </p>
-				</div>				<div class="content">
-					<p> content goes here </p>
-				</div>				<div class="content">
-					<p> content goes here </p>
 				</div>
 			</div>
 		</main>
+		<footer>
+
+		</footer>
 	</body>
 </html>
