@@ -20,6 +20,7 @@ function init() {
 	}
 
 	$('#learn-more').on('click', function(e) {
+		e.preventDefault();
 	    $('html, body').stop().animate({
 	        'scrollTop': $('#main-content').offset().top
 	    }, 600, 'swing');
