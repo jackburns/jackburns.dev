@@ -112,6 +112,11 @@ main .content {
 	box-shadow: inset 0 2px 0 0 #dddddd;
 }
 
+h1, h2, .center, .links {
+	text-align: center;
+	display: block;
+}
+
 #header .wrapper {
 	position: absolute;
 	bottom: 0;
