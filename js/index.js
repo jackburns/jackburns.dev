@@ -1,32 +1,39 @@
-'use strict';
+"use strict";
 
-$(document).ready(init);
+if (
+  document.readyState === "complete" ||
+  (document.readyState !== "loading" && !document.documentElement.doScroll)
+) {
+  init();
+} else {
+  document.addEventListener("DOMContentLoaded", init);
+}
 
 function init() {
+  if (!isTouchDevice()) {
+    var banner = document.querySelector("#banner");
 
-	if(!isTouchDevice()) {
-		var banner = document.getElementById('banner');
-	    banner.style.position = 'fixed';
+    banner.style.position = "fixed";
 
-		window.onscroll = function() {
-		    var viewportHieght = $(window).height();
+    window.onscroll = function() {
+      // get ratio of scroll depth to screen size and use that to fade div
+      var viewportHieght = window.innerHeight;
 
-		    // get ratio of scroll depth to screen size and use that to fade div
-		    var position = $(document).scrollTop();
-		    var fade = 1 - (position / viewportHieght * 2);
+      var position = window.scrollY;
+      var fade = 1 - (position / viewportHieght) * 2;
 
-			banner.style.opacity = '' + fade;
-		}
-	}
+      banner.style.opacity = "" + fade;
+    };
+  }
 
-	$('#learn-more').on('click', function(e) {
-		e.preventDefault();
-	    $('html, body').stop().animate({
-	        'scrollTop': $('#main-content').offset().top
-	    }, 600, 'swing');
-	});
+  document.querySelector("#learn-more").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector("#main-content").scrollIntoView({
+      behavior: "smooth"
+    });
+  });
 }
 
 function isTouchDevice() {
-	return 'ontouchstart' in window || 'onmsgesturechange' in window;
-};
+  return "ontouchstart" in window || "onmsgesturechange" in window;
+}
